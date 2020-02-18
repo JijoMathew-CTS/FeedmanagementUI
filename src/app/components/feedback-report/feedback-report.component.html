@@ -1,0 +1,97 @@
+<div class="text-center " style="padding: 5px;">
+  <div class="bg-light1"><!--alert alert-danger-->
+    <h2 class="heading">Report</h2>
+  </div>
+</div>
+
+<div class="row" style="width: 80%;margin:2% auto;border:solid thin lightgray;padding: 1%">
+    <div class="input-group col-md-1"></div>
+  <div class="input-group col-md-4" >
+    <div class="input-group-prepend">
+      <label class="input-group-text" style="border: none;background: transparent" for="inputGroupSelect01">Type:</label>
+    </div>
+
+    <select (change)="selectType($event)" class="custom-select" id="inputGroupSelect01">
+      <option value="" disabled selected>Select</option>
+      <option value="event">Event</option>
+      <option value="benificiary">Beneficiary</option>
+      <option value="city">City</option>
+    </select>
+
+  </div>
+  <div class="input-group col-md-4" >
+      <div class="input-group-prepend">
+        <label class="input-group-text" style="border: none;background: transparent" for="inputGroupSelect01">Status:</label>
+      </div>
+  
+      <select (change)="selectStatus($event)" class="custom-select" id="inputGroupSelect02">
+          <option value="" disabled selected>Select</option>
+          <option value="va">Volunteer Attended</option>
+          <option value="vn">Volunteer Not Attended</option>
+          <option value="vu">Volunteer Unregistered</option>
+      </select>
+    </div>
+    <div class="input-group col-md-2">
+      <button type="button" class="btn btn-success" (click)="report()" style="margin: auto">Submit</button>
+    </div>
+    <div class="input-group col-md-1"></div>
+</div>
+
+
+<div style="width: 90%;margin: auto;border:solid 1px lightgray;padding: 5px">
+  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"
+    class="table table-striped table-bordered table-sm row-border hover">
+    <thead>
+      <tr>
+        <th>Event Id</th>
+        <th>Base Location</th>
+        <th>Beneficiary Name</th>
+        <!-- <th style=""></th>event_date</th> -->
+        <th>Employee Id</th>
+        <th [ngStyle]="{display:dispVa}">Score</th>
+        <th [ngStyle]="{display:dispVa}">Answer 1</th>
+        <th [ngStyle]="{display:dispVa}">Answer 2</th>
+        <th [ngStyle]="{display:dispVn}">Choice</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let rpt of detailRpt" >
+        <td>{{ rpt.event_id }}</td>
+        <td>{{ rpt.base_location }}</td>
+        <td>{{ rpt.beneficiary_name }}</td>
+        <td>{{ rpt.employee_id }}</td>
+        <td [ngStyle]="{display:dispVa}">{{ rpt.score }}</td>
+        <td [ngStyle]="{display:dispVa}">{{ rpt.answer1 }}</td>
+        <td [ngStyle]="{display:dispVa}">{{ rpt.answer2 }}</td>
+        <td [ngStyle]="{display:dispVn}">{{ rpt.choice }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  <!-- <div style="width: 90%;margin: auto;border:solid 1px lightgray;padding: 5px;">
+    <table datatable [dtOptions]="dtOptions2" [dtTrigger]="dtTrigger2"
+      class="table table-striped table-bordered table-sm row-border hover"  [ngStyle]="{display:dispTab2}">
+      <thead>
+        <tr>
+          <th>event_id</th>
+          <th>base_location</th>
+          <th>beneficiary_name</th>
+          <th>employee_id</th>
+
+        </tr>
+      </thead>
+      <tbody *ngIf="fStatus!=='va'">
+        <tr *ngFor="let rpt of detailRpt" >
+          <td>{{ rpt.event_id }}</td>
+          <td>{{ rpt.base_location }}</td>
+          <td>{{ rpt.beneficiary_name }}</td>
+          <td>{{ rpt.employee_id }}</td>
+
+        </tr>
+      </tbody>
+    </table>
+
+</div> -->
+
+<app-footer></app-footer>

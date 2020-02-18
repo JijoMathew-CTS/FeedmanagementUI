@@ -1,0 +1,30 @@
+.blueLine{
+    background-color: #0039a6;
+    color: white;
+}
+.rowstyle{
+    width: 100%;
+    margin: auto;
+    padding: 1%;
+}
+
+.tile-content {
+    padding: 1%;
+    margin-top: 1%;
+}
+.tile-number {
+    font-size: 14px;
+    line-height: 1;
+    padding: 5px 0 15px;
+    color: white;
+    /*padding: 10% auto 10% auto;*/
+    padding-top: 10%;
+    padding-bottom: 10%;
+    height: 10vh;
+    margin-top: 2%;
+    text-align: center;
+}
+.tile-content:hover {
+    background-color: cadetblue;
+}
+.black  {    background-color:black;}

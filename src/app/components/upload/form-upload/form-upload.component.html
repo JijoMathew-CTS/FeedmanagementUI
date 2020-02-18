@@ -1,0 +1,28 @@
+<div class="text-center " style="padding: 5px;">
+  <div class="bg-light1"><!--alert alert-danger-->
+    <h2 class="heading">Upload PMO Details</h2>
+  </div>
+</div>
+
+<div class="updDiv">
+    <div class="form-row" style="margin: 4% 0%;">
+      <div class="col-md-4"></div>
+      <label class="col-sm-1 col-form-label" class="btn btn-default" style="border: solid 1px lightgray">
+        <input type="file" (change)="selectFile($event)">
+      </label>
+      <div class="col-md-1" style="text-align: center">
+        <button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+      </div>
+</div>
+
+  <div *ngIf="currentFileUpload" class="progress" style="width: 40%;margin: auto;height: 30px;margin-top: 3%">
+      <div class="progress-bar" role="progressbar"
+            attr.aria-valuenow="{{progress.percentage}}" aria-valuemin="0" aria-valuemax="100"
+            [ngStyle]="{width:progress.percentage+'%'}" style="color: black;font-weight: bold;height: 30px">
+        {{progress.percentage}}%
+      </div>
+</div>
+
+<!--  progress-bar-info progress-bar-striped -->
+
+<app-footer></app-footer>

@@ -1,0 +1,41 @@
+
+.actionBox{
+     width: 96%;
+     margin: auto;
+}
+.col1{
+    background-color: #B3E6E6;
+}
+.col2{
+    background-color: #FCE1BA;
+}
+.rowWidth{
+    width: 100%;
+}
+.img1,.img2{
+    padding: 0%;
+}
+.ActFontSm{
+    font-size: 12px !important;
+}
+.green{
+    color: #00575A
+}
+.orange{
+    color: #804D09;
+}
+.h6right{
+    width: 100%;
+}
+.marleft{
+    margin-left: 1%;
+}
+@media screen and (max-width: 500px) {
+    .sendbtn{
+        margin-left: 40%;
+        margin-top: 1%;
+    }
+    .img1,.img2{
+      display: none;
+    }
+}

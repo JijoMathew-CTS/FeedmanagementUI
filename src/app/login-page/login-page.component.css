@@ -1,0 +1,25 @@
+
+
+.login,
+.image {
+  
+  min-height: 100vh;
+}
+
+.bg-image {
+  background-image: url('http://localhost:4200/assets/img/login.JPG');
+  background-size: cover;
+  background-position: center center;
+  margin-top: 10vh;
+  height: 80vh;
+}
+.btn-green{
+    border: none;
+    background-color: limegreen;
+}
+.cognizantOutReach{
+  font-style: intial;
+  font-family:cursive;
+  font-size:29px;
+  color:blue !important;
+}

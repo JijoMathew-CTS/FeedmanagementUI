@@ -1,0 +1,70 @@
+.icon {
+	size: 7px;
+	color: rgb(247, 218, 90);
+}
+
+table {
+	background-color: #15aabf;
+}
+
+th {
+	padding: 25px 25px 25px 25px;
+}
+
+p {
+	color: white;
+}
+
+.selected {
+	color: yellow;
+}
+
+.padCls{
+	padding: 2% 2% 1%;
+}
+
+#fa-ang-1.ang-active{
+    color: darkorange;
+}
+#fa-fro-1.fro-active{
+    color: darkorange;
+}
+#fa-meh-1.meh-active{
+    color: darkorange;
+}
+#fa-smi-1.smi-active{
+    color: darkorange;
+}
+#fa-gri-1.gri-active{
+    color: darkorange;
+}
+.contain-cls{
+	margin-left: 10%;
+	width: 80%;
+}
+.btn-center{
+	margin:auto;
+}
+
+@media screen and (max-width: 500px) {
+	.ng-fa-icon{
+		font-size: 10px;
+	}
+	.padCls{
+		padding: 5% 2% 5% !important;
+	}
+}
+
+.blueLine{
+    background-color: #0039a6;
+    color: white;
+}
+.rowstyle{
+    width: 100%;
+    margin: auto;
+    padding: 1%;
+}
+textarea{
+	border: solid thin lightgreen;
+	margin-top: 1%;
+}

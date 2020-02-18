@@ -1,0 +1,18 @@
+html,
+body {
+  height: 100%
+}
+.progress-bar{
+  background-color: #28a745;
+}
+.updDiv{
+  margin:5% auto;
+  border: solid thin lightgray;
+  width: 60%;
+}
+@media screen and (max-width: 500px) {
+  .updDiv{
+    margin:5% auto;
+    width: 90%;
+  }
+}

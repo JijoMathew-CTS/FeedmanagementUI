@@ -1,0 +1,9 @@
+.marRight{
+    margin-left: 88%;
+}
+
+@media screen and (max-width: 500px) {
+    .marRight{
+        margin-left: 67%;
+    } 
+}

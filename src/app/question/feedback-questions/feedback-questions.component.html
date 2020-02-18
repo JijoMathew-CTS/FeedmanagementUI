@@ -1,0 +1,36 @@
+<div class="text-center " style="padding: 5px;">
+  <div class="bg-light1"><!--alert alert-danger-->
+    <h2 class="heading">Feedback Questions</h2>
+  </div>
+</div>
+
+<div class="row marRight">
+  <button type="button" class="btn btn-success" [routerLink]="'/FeedbackQuestAdd'">Add Question</button>
+</div>
+
+<div style="width: 90%;margin: auto;border:solid 1px lightgray;padding: 5px">
+  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-striped table-bordered table-sm row-border hover">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Total Answers</th>
+        <th>Feedvack Type</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Question 1</td>
+        <td>2</td>
+        <td>Feedback</td>
+        <td class="text-center"><button type="button" class="btn btn-primary" [routerLink]="['/FeedbackQuestEdit',12]"><i class="fa fa-pencil-square-o"></i> Edit</button></td>
+      </tr>
+      <tr *ngFor="" >
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="text-center"> <button type="button" class="btn btn-primary" [routerLink]="['/FeedbackQuestEdit',12]"><i class="fa fa-pencil-square-o"></i> Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

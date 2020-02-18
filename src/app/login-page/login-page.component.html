@@ -1,0 +1,101 @@
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 50px;">
+</nav>
+
+<div  class="text-center " style="padding: 5px;">
+  <div class="bg-light">alert alert-danger
+    <h2 class="heading">OUTREACH FMS</h2>
+  </div>
+</div>
+
+<div class="row" style="margin-top: 5%">
+  <div class="logCls">
+    <div class="card-body">
+      <h5 class="card-title">Login</h5>
+      <hr>
+      <form role="form" (submit)="login()">
+        <div class="input-group">
+          <div class="input-group-prepend">
+              <label for="username">Username:</label>
+          </div>
+              <input type="text" class="form-control" id="username" name="username" required [(ngModel)]="credentials.username" (keydown)="clrMessage()" />
+        </div>
+        <div class="input-group">
+          <div class="input-group-prepend">
+               <label for="password">Password:</label>
+          </div>
+              <input type="password" class="form-control" id="password" name="password" [(ngModel)]="credentials.password" (keydown)="clrMessage()" />
+        </div>
+        <div class="input-group">
+          <button type="submit" class="btn btn-success" style="margin: auto;border-color: gray">Submit</button>
+        </div>
+      </form>
+      <div style="text-align: center;color: red;height: 20px;font-size: 14px;padding-top: 2%;">
+          {{message}}
+      </div>
+    </div>
+  </div>
+</div>-->
+
+<!--<div class="row">
+  <div class="col-md-4 col-xm-1"></div>
+  <div class="col-md-4 col-xm-10">
+  <div class="card" style="">
+    <div class="card-body">
+      <h5 class="card-title" style="text-align: center">Login</h5>
+      <form role="form" (submit)="login()">
+        <div class="form-group">
+          <label for="username">Username:</label> <input type="text" class="form-control" id="username" name="username"
+            [(ngModel)]="credentials.username" />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label> <input type="password" class="form-control" id="password"
+            name="password" [(ngModel)]="credentials.password" />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+  </div>
+</div>-->
+
+
+<div class="container-fluid">
+    <div class="row no-gutter">
+        <!-- The image half -->
+        <div class="col-md-6 d-none d-md-flex bg-image"></div>
+        <!-- The content half -->
+        <div class="col-md-6 bg-light">
+            <div class="login d-flex align-items-center py-5">
+                <!-- Demo content-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-xl-7 mx-auto">
+                            <h3 class="display-4"></h3>
+                            <p class="text-muted mb-4 cognizantOutReach">Cognizant OutReach</p>
+                            <p class="text-muted mb-4">Feedback Management System</p>
+                             <form role="form" (submit)="login()">
+                                <div class="form-group mb-3">
+                                     <input type="text" class="form-control" id="username" name="username" required [(ngModel)]="credentials.username" (keydown)="clrMessage()"  placeholder="Email Address" />
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="password" class="form-control" id="password" name="password" [(ngModel)]="credentials.password" (keydown)="clrMessage()" placeholder="Password"/>
+                                    <!--<input id="inputPassword" type="password" placeholder="Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">-->
+                                </div>
+                                <!--<div class="custom-control custom-checkbox mb-3">
+                                    <input id="customCheck1" type="checkbox" checked class="custom-control-input">
+                                    <label for="customCheck1" class="custom-control-label">Remember password</label>
+                                </div>-->
+                                <button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 shadow-sm btn-green">Sign Me in</button>
+                                <!--<button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Sign in</button>-->
+                                <!--<div class="text-center d-flex justify-content-between mt-4"><p>Snippet by <a href="https://bootstrapious.com/snippets" class="font-italic text-muted"> 
+                                        <u>Boostrapious</u></a></p></div>-->
+                            </form>
+                        </div>
+                    </div>
+                </div><!-- End -->
+
+            </div>
+        </div><!-- End -->
+
+    </div>
+</div>

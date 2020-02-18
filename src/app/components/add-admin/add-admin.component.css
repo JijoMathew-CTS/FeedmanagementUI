@@ -1,0 +1,24 @@
+
+@media screen and (max-width: 500px) {
+    .tableDiv{
+        width: 90% !important;
+        margin-top: 6% !important;
+    }
+    .label{
+        text-align: center !important;
+    }
+}
+.tableDiv{
+    width: 60%;
+}
+.addCls{
+    border: solid thin lightgray;
+    width: 60%;
+    margin: 5% auto 2%;
+}
+.rowCls{
+    margin: 3% auto;
+}
+.label{
+    text-align: right;
+}

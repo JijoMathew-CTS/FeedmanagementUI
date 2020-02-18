@@ -1,0 +1,72 @@
+<div class="text-center " style="padding: 5px;">
+  <div class="bg-light1"><!--alert alert-danger-->
+    <h2 class="heading">Send Mail</h2>
+  </div>
+</div>
+
+<div style="margin: auto; width: 80%;">
+  <div class="input-group mb-4" style="margin: auto;width: 30%;">
+    <div class="input-group-prepend">
+      <label class="input-group-text" style="border: none;background: transparent" for="inputGroupSelect01">Type:</label>
+    </div>
+
+    <select (change)="selectChangeHandler($event)" class="custom-select" id="inputGroupSelect01">
+      <option value="" disabled selected>Select</option>
+      <option value="va">Volunteer Attended</option>
+      <option value="vna">Volunteer Not Attended</option>
+      <option value="vun">Volunteer Unregistered</option>
+    </select>
+  </div>
+</div>
+
+ <div style="width: 90%;margin: auto;border:solid 1px lightgray;padding: 5px">
+
+ <form (ngSubmit)="onSubmit()" [formGroup]="myForm">
+  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" 
+    class="table table-striped table-bordered table-sm row-border hover form-group table-response">
+    <thead>
+      <tr>
+        <!-- <th>Select All <input type="checkbox" id="chkAll" (change)="selectAll()" class="chkBox"></th> -->
+        <th>Event Id</th>
+        <th>Employee Id</th>
+        <th>Remainder</th>
+        <th>Acknowledgement</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let feedback of feedbackReport;let i = index">
+          <!-- <td  style="text-align: center">
+              <input type="checkbox" name="chk" id="chk{{i}}" >
+              <input type="hidden" id="event{{i}}" value="{{feedback.eventId}}">
+              <input type="hidden" id="employee{{i}}" value="{{feedback.employeeId}}">
+          </td> -->
+        <td >{{ feedback.eventId }} </td>
+        <td >{{ feedback.employeeId }}</td>
+        <!-- <td >{{ feedback.emailStatus =='P' ? 'Sent':'Not Sent'}}</td> -->
+        <td>
+          <label *ngIf="feedback.emailStatus !=='S'">
+              <button type="button" class="btn btn-xs btn-info btnCustom" (click)="mail(feedback.eventId,feedback.employeeId,'REM')">Send Remainder</button>
+        </label>
+        </td>
+        <td >
+          <!-- {{ feedback.feedbackStatus =='P' ? 'Acknowledged' : 'Not Acknowledged' }} -->
+          <label *ngIf="feedback.feedbackStatus ==='A'">Acknowledged</label>
+          <label *ngIf="feedback.feedbackStatus ==='I' && feedback.emailStatus ==='S'">
+              <button type="button" class="btn btn-xs btn-info btnCustom" (click)="mail(feedback.eventId,feedback.employeeId,'ACK')">Send Acknowledgement</button>
+          </label>
+        </td>
+        
+        
+      </tr>
+  
+    </tbody>
+  </table>
+
+  <!-- <div style="width: 100%;margin: auto;text-align: center;border-top: solid thin lightgray;">
+    <button type="submit" class="btn btn-success" style="margin-top: 1%">Send Remainder</button>
+  </div> -->
+</form>
+</div> 
+
+<app-footer></app-footer>

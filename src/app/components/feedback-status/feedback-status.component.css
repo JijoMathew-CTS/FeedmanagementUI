@@ -1,0 +1,9 @@
+
+@media screen and (max-width: 500px) {
+    .table-response{
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        font-size: 11px;
+    }
+}

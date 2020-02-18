@@ -1,0 +1,51 @@
+<div class="text-center " style="padding: 5px;">
+  <div class="bg-light1"><!--alert alert-danger-->
+    <h2 class="heading">Add Question</h2>
+  </div>
+</div>
+
+<div class="row martop">
+  <div class="col-md-1"></div>
+  <div class="col-md-2 col-sm-12">Feedback Type</div>
+  <div class="custom-control custom-radio col-md-9">
+      <div class="col-md-2"><input type="radio" name="feedbackType" value="participated">Participated</div>
+      <div class="col-md-2"><input type="radio" name="feedbackType" value="notParticipated">Not Participated</div>
+      <div class="col-md-2"><input type="radio" name="feedbackType" value="unregisterd">Unregisterd</div>
+  </div>
+</div>
+<div class="row  martop">
+  <div class="col-md-1"></div>
+  <div class="col-md-2"><input type="checkbox" name="multipleAnswer">Allow multiple Answer</div>
+</div>
+<div class="row  martop">
+  <div class="col-md-1"></div>
+  <div class="col-md-2"><input type="checkbox" name="freeText">Free Text Answer</div>
+</div>
+<div class="row  martop">
+  <div class="col-md-1"></div>
+  <div class="col-md-2"><input type="checkbox" name="customQuest">Custom Question</div>
+</div>
+<div class="row  martop">
+  <div class="col-md-1"></div>
+  <div class="col-md-2">Question</div>
+  <div class="col-md-6">
+    <input type="text" class="txt" placeholder="Description (required)">
+  </div>
+</div>
+
+<div class="AnswerDiv" #div></div>
+
+<div class="row  martop">
+  <div class="col-md-1"></div>
+  <div class="col-md-2"><button type="button" class="btn btn-success" (click)="addAnswer()" style="margin: auto"><i class="fa fa-plus-square"></i> Add Answer</button></div>
+</div>
+
+<div class="row  martop">
+  <div class="col-md-1"></div>
+  <div class="col-md-2"></div>
+  <div class="col-md-6">
+      <button type="button" class="btn btn-success" (click)="saveAnswer()"><i class="fa fa-pencil-square-o"></i> Save</button>&nbsp;&nbsp;
+      <button type="button" class="btn btn-secondary"  [routerLink]="'/feedbackQuestion'"><i class="fa fa-ban"></i> Cancel</button>&nbsp;&nbsp;
+      <button type="button" class="btn btn-danger"  (click)="removeAnswer()"><i class="fa fa-trash"></i> Delete</button>
+  </div>
+</div>

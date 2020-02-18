@@ -1,0 +1,30 @@
+
+@media screen and (max-width: 500px) {
+    .table-response{
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        font-size: 11px;
+    }
+    .chkBox{
+        width: 13px !important;
+        height: 13px !important; 
+    }
+    .dataTables_paginate{
+        font-size: 11px; 
+    }
+    .dataTables_info{
+        font-size: 11px
+    }
+    .btnCustom{
+        font-size: 9px !important;
+    }
+}
+
+.chkBox{
+    width: 17px;
+    height: 17px;
+}
+.btnCustom{
+    font-size: 11px;
+}

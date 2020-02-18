@@ -1,0 +1,103 @@
+/*
+.round {
+    width:200px;
+    height:200px;
+    border-radius:250px;
+    line-height:500px;
+    text-align:center;
+    background:#000
+  }
+  .rating-table{
+      width: 85%;
+  }
+.s-active{
+    color: darkorange;
+    font-size: 22px;
+    opacity: 1 !important;
+}
+.feedIcon{
+    opacity:0.2;
+}
+
+@media screen and (max-width: 500px) {
+    .rateDiv{
+        height:auto !important;
+        overflow-y:scroll !important; 
+        margin-bottom: 10% !important;
+    }
+}
+.rateDiv{
+    overflow:auto;
+    margin-bottom: 1vh;
+    height: 78vh;
+}
+.rateDiv::-webkit-scrollbar {
+    width: 8px;
+}
+.rateDiv::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+.rateDiv::-webkit-scrollbar-thumb {
+    background: rgb(122, 122, 122); 
+    border-radius: 10px;
+}
+.rateDiv::-webkit-scrollbar-thumb:hover {
+    background: rgb(122, 122, 122);
+}
+*/
+
+
+.tile-content {
+    padding-top: 50px;
+}
+.tile-number {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 5px 0 15px;
+}
+.tile-description {
+    text-transform: uppercase;
+}
+.tile-footer {
+    background-color: rgba(0, 0, 0, 0.1);
+    color:white;
+    display: block;
+    padding: 5px;
+    transition: all 0.3s ease-in-out 0s;
+}
+.tile-footer:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+}
+
+.dark-blue  {    background-color: #34495E;}
+.green      {    background-color: #16A085;}
+.blue       {    background-color: #2980B9;}
+.orange     {    background-color: #ff8f1c;}
+.red        {    background-color: #d9534f;}
+.purple     {    background-color: #c800a1;}
+.dark-gray  {    background-color: #53565a;}
+.gray       {    background-color: #95A5A6;}
+.light-gray {    background-color: #BDC3C7;}
+.yellow     {    background-color: #F1C40F;}
+.text-dark-blue {    color: #34495E;}
+.text-green {    color: #16A085;}
+.text-blue  {    color: #2980B9;}
+.text-orange{    color: #F39C12;}
+.text-red   {    color: #E74C3C;}
+.text-purple{    color: #8E44AD;}
+.text-faded {    color: rgba(255, 255, 255, 0.7);
+}
+
+.dashMargin{
+    margin-top: 1%;
+}
+.text-faded{
+    margin-left: 5% !important;
+}
+.tile-footer{
+    text-align: right;
+}

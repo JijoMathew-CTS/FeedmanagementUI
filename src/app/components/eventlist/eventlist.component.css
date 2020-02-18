@@ -1,0 +1,19 @@
+.event-list{
+    margin: 25px;
+    background-color:white;
+}
+.event-header{
+    padding: 15px;
+    background-color: #0039a6;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+.eventlist-content{
+    padding-top: 50px;
+}
+.borderless td, .borderless th {
+    border: none;
+    background: transparent;
+}

@@ -1,0 +1,34 @@
+.blueLine{
+    background-color: #0039a6;
+    color: white;
+}
+.rowstyle{
+    width: 99%;
+    margin: auto;
+    padding: 1%;
+}
+.cardrow{
+    border: solid thin lightgreen;
+    width: 98%;
+    margin:2% auto;
+    border-radius: 5px;
+    font-size: 12px;
+}
+.under{
+    border-bottom: thin solid lightgrey;
+    padding: 1%;
+}
+.tableData{
+    font-size: 14px;
+    width: 100%;
+}
+.tableData th{
+    background-color: #0039a6;
+    color: white;
+    font-size: 11px;
+    padding: 0% 1% 1% 0%;
+    border: solid thin lightgreen;
+}
+.tableData td{
+    border: solid thin lightgray;
+}

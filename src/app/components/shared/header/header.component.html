@@ -1,0 +1,101 @@
+<!--<div class="LoadingDiv">
+  <div class="overlay"></div>
+  <div class="loader"></div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" [routerLink]="'/'">Outreach FMS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="'/dashboard'">Dashboard</a>
+      </li>
+
+      <li *ngIf="isAdminHidden" class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+           {{isAdminHidden?'Admin':''}} Menu
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
+          <a class="dropdown-item" [routerLink]="'/addadmin'"       > Edit Admin </a>
+          <a class="dropdown-item" [routerLink]="'/addpmo'"         > Edit PMO </a>
+          <a class="dropdown-item" [routerLink]="'/uploadpmo'"      > Upload Excel </a>
+          <a class="dropdown-item" [routerLink]="'/sendmail'"       > Send Mail </a>
+        </div>
+      </li>
+
+      <li *ngIf="isPmoHidden || isPocHidden" class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          {{ role==='ROLE_POC' ? 'POC' : 'PMO' }} Menu
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="'/datatable'"> Rating Report </a>
+          <a class="dropdown-item" [routerLink]="'/feedbackStatus'" > Feedback Status Report </a>
+          <a class="dropdown-item" [routerLink]="'/feedbackreport'" > Detail Report </a>
+        </div>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="'/logout'">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>-->
+
+
+<div class="LoadingDiv">
+  <div class="overlay"></div>
+  <div class="loader"></div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" [routerLink]="'/'"><i class="fa fa-handshake-o"></i> Outreach FMS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        
+        <a class="nav-link" [routerLink]="'/dashboard'"> <i class="fa fa-th-large"></i> Dashboard</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="'/eventlist'"><i class="fa fa-caret-square-right"></i> Events</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="'/'"><i class="fa fa-file-excel"></i> Report</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+           <i class="fas fa-cog"></i> Configuration
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
+          <a class="dropdown-item" [routerLink]="'/feedbackQuestion'">Add Questions</a>
+          <a class="dropdown-item" [routerLink]="'/addpmo'"> Add PMO </a>
+          <a class="dropdown-item" [routerLink]="'/addadmin'"> Add POC </a>
+          <a class="dropdown-item" [routerLink]="'/uploadpmo'"> Uploads </a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown navMenuRight">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+           <i class="fas fa-user-tie"></i> User
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
+          <a class="dropdown-item" [routerLink]="'/'"> Profile </a>
+          <a class="dropdown-item" [routerLink]="'/logout'">Logout</a>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</nav>

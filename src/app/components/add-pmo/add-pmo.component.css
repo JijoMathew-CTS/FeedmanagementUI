@@ -1,0 +1,29 @@
+
+@media screen and (max-width: 500px) {
+    .tableDiv{
+        width: 90% !important;
+        margin-top: 6% !important;
+    }
+    .label{
+        text-align: center !important;
+    }
+}
+.tableDiv{
+    width: 90%;
+}
+.addCls{
+    border: solid thin lightgray;
+    width: 90%;
+    margin: 2% auto 0%;
+}
+.rowCls{
+    margin: 2% auto 0%;
+}
+.label{
+    text-align: right;
+}
+.blueStrip{
+    margin-top: 0%;
+    background-color: #0039a6;
+    color: white;
+}

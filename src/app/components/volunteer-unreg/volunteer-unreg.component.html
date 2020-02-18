@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 50px;">
+</nav>
+
+<!--<div  class="text-center " style="padding: 5px;">
+  <div class="bg-light1">
+    <h2 class="heading">FeedBack Survey</h2>
+  </div>
+</div>-->
+
+<div [hidden]="isHidden"style="width: 80%;margin: auto;border: solid 1px lightgrey;padding: 10px;margin-top: 5%">
+  <div class="h-100 mt-2 col-md-12 d-flex justify-content-center" style="padding-top: 2%;padding-bottom: 2px;">
+    <p style="color: red;font-size: 18px">{{message}}</p>
+  </div>
+    <div class="" style="padding-bottom: 10px;text-align: center">
+        <a class="btn" [routerLink]="'/'" style="border: solid 1px">Login</a>
+    </div>
+</div>
+
+<div [hidden]="!isHidden" style="width: 80%;margin: auto;border: solid 1px lightgray;padding: 5px;">
+  <div class="row blueLine rowstyle">Hey there, please share your feedback for unregistering from the event?</div>
+  <form (ngSubmit)="onSubmit()">
+    <div class="row" style="padding-top: 2%;width: 98%;margin: auto">
+      <div class="col-lg-2 col-sm-6" *ngFor="let op of options">
+        <div class="tile-content black">
+          <div class="tile-number text-faded ">{{op.option}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="row form-group" style="margin-top: 2%;">
+      <div class="col-md-12 text-right" style="text-align: center">
+        <button type="submit" class="btn btn-danger">Reset</button> &nbsp;&nbsp;
+        <button type="submit" class="btn btn-success">Submit Feedback</button>
+      </div>
+    </div>
+  </form>
+</div>

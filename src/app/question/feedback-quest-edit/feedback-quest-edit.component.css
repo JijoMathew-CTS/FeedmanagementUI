@@ -1,0 +1,25 @@
+.martop{
+    margin-top: 1%;
+}
+.AnswerDiv{
+    margin-top: 1%;
+}
+.txt{ 
+    border: solid thin lightgrey;
+    width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+    .martop{
+        width: 96%;
+        margin: auto;
+        margin-top: 2%;
+    }
+    .custom-radio{
+        width: 100%;
+        margin-left: 30%;
+    }
+    .delBtn{
+        text-align: right;
+    }
+}
