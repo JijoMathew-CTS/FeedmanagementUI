@@ -17,3 +17,6 @@
     border: none;
     background: transparent;
 }
+.border_bottom{
+    border-bottom: 1px grey dotted;
+}

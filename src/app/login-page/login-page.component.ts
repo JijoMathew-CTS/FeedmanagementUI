@@ -52,18 +52,19 @@ clrMessage(){
 
   private authenticateLogin() {
 
-	this.authenticated = true;
+/*	this.authenticated = true;
 	this.authService.setLoggedIn(true);
 	this.authService.setUser("1", "1", "1", "ROLE_ADMIN", "true");//ROLE_ADMIN ROLE_POC ROLE_PMO
-  this.router.navigate(['/dashboard']);
+  this.router.navigate(['/dashboard']);*/
  
-/*this.authService.authenticate()
+this.authService.authenticate()
 .subscribe((user: User) => {
   console.log(user.id+" * "+user.name+" * "+user.emailId+" * "+user.role+" * "+user.isUserAuthentic);
-});*/
- /*     this.authService.authenticate().subscribe(
+});
+     this.authService.authenticate().subscribe(
         (user: User) => {
           if (user.isUserAuthentic == "true") {
+       
             this.authenticated = user.isUserAuthentic == "true";
             this.authService.setLoggedIn(this.authenticated);
             this.authService.setUser(user.id, user.name, user.emailId, user.role, user.isUserAuthentic);
@@ -78,7 +79,7 @@ clrMessage(){
             this.router.navigate(['/login']);
           }
         });
-*/
+
   }
 
   private saveCredentialsToLocal() {

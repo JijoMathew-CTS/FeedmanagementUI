@@ -19,7 +19,7 @@ export class UploadFileService {
       reportProgress: true,
       responseType: 'text'
     });
-    alert('File is completely uploaded!');
+    //alert('File is completely uploaded!');
     this.router.navigate(['/uploadpmo']);
     return this.http.request(req);
   }

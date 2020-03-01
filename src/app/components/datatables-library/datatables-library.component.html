@@ -2,7 +2,7 @@
 
 <div class="text-center" style="padding: 5px;">
   <div class="bg-light1"><!--alert alert-danger-->
-    <h2 class="heading">Event Report</h2>
+    <h2 class="heading">EVENTS REPORT</h2>
   </div>
 </div>
 
@@ -27,17 +27,26 @@
     class="table table-striped table-bordered table-sm row-border hover">
     <thead>
       <tr>
-        <th style="width: 80%">{{ selectedValue | titlecase }} Name</th>
-        <th style="width: 20%">Average Rating</th>
+        <th style="width: 20%">{{ selectedValue | titlecase }} Event ID</th>
+        <th style="width: 20%">Beneficiary Name</th>
+        <th style="width: 20%">Base Location</th>
+        <th style="width: 20%">Council Name</th>
+        <th style="width: 20%">Project</th>
+        <!-- <th style="width: 20%">Business Unit</th> -->
+        <th style="width: 20%">Rating</th>
       </tr>
     </thead>
+    
     <tbody>
-      <tr *ngFor="let event of eventReport">
-        <td>{{ event.name }}</td>
-        <td>{{ event.averageScore }}</td>
+      <tr *ngFor="let event of eventReports">
+        <td>{{ event.eventSummary.eventId }}</td>
+        <td>{{ event.eventSummary.beneficiaryName }}</td>
+        <td>{{ event.eventSummary.baseLocation }}</td>
+        <td>{{ event.eventSummary.councilName }}</td>
+        <td>{{ event.eventSummary.project }}</td>
+        <td>{{ event.eventRating }}</td>
       </tr>
     </tbody>
   </table>
 </div>
-
 <app-footer></app-footer>

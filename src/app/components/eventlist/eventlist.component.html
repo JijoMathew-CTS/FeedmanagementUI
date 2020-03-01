@@ -1,7 +1,7 @@
 <app-action-header></app-action-header>
 <div class="text-center " style="padding: 5px;">
   <div class="bg-light1"><!--alert alert-danger-->
-    <h2 class="heading">Events</h2>
+    <h2 class="heading">EVENTS</h2>
   </div>
 </div>
 
@@ -11,21 +11,64 @@
       <thead>
         <tr>
           <th style="width:150px;"> Action</th> 
-          <th>Event ID<br>        <input type="text" placeholder="filter column" [(ngModel)]="eventIdSearch"></th>
+          <th>Event ID<br>        <input type="text" placeholder="filter column" [(ngModel)]="event_id"></th>
           <th>Month<br>           <input type="text" placeholder="filter column" [(ngModel)]="monthSearch"></th>
           <th>Base Location<br>   <input type="text" placeholder="filter column" [(ngModel)]="baseLocSearch"></th>
           <th>Council Name<br>    <input type="text" placeholder="filter column" [(ngModel)]="councilNameSearch"></th>
           <th>Beneficiary Name<br><input type="text" placeholder="filter column" [(ngModel)]="beneficiaryNameSearch"></th>
         </tr>
       </thead>
-      <tbody>
-       <tr *ngFor="let data of datalist | filter:eventIdSearch:monthSearch">
-            <td style="width:150px;"> <button class="btn btn-primary" style="width:100px;background-color: #0039a6;" (click)="eventDetails()"><i class="fa fa-eye" aria-hidden="true"></i>VIEW</button></td>
-            <td>{{data.unit_price}}</td>
-            <td>{{data.unit_price}}</td>
-            <td>{{data.unit_price}}</td>
-            <td>{{data.unit_price}}</td>
-      </tr>        
+      <tbody *ngFor="let data of eventLists | filter:eventIdSearch:monthSearch">
+         <tr>
+            <td style="width:150px;"> <button class="btn btn-primary" style="width:100px;background-color: #0039a6;" routerLink="/event/{{data.eventId}}"><i class="fa fa-eye" aria-hidden="true"></i>VIEW</button></td>
+            <td>{{data.eventId}}</td>
+            <td>{{data.baseLocation}}</td>
+            <td>{{data.beneficiaryName}}</td>
+            <td>{{data.eventName}}</td>
+            <td>{{data.councilName}}</td>
+
+            <!-- eventId:String;
+    baseLocation:String;
+    beneficiaryName:String;
+    eventName:String;
+    councilName:String;
+    eventMonth:String; -->
+      </tr>   
+      <tr style="width: 100%;" ><!--class="viewCls_{{data.eventId}}"-->
+        <td></td>
+        <td colspan="5">
+        <div class="row">
+            <div class="col-md-6 border_bottom">Event Name</div>
+            <div class="col-md-6 border_bottom">{{data.eventName}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border_bottom">Event Date</div>
+            <div class="col-md-6 border_bottom">{{data.eventDate}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border_bottom">status</div>
+            <div class="col-md-6 border_bottom">{{data.status}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border_bottom">venueAddress</div>
+            <div class="col-md-6 border_bottom">{{data.venueAddress}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border_bottom">Total Volunteers</div>
+            <div class="col-md-6 border_bottom">{{data.totalVolNo}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border_bottom">Total Volunteers hrs</div>
+            <div class="col-md-6 border_bottom">{{data.totalVolHrs}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border_bottom">Total Travel Hrs</div>
+            <div class="col-md-6 border_bottom">{{data.totalTravelHrs}}</div>
+        </div>
+       
+        </td>
+      </tr>
+    
     </tbody>
   </table>
 </div>
